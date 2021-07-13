@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.pacman {
+  position: relative;
+} 
+
+.pacman:before, .pacman:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 100px solid yellow;
+  border-radius: 50%;
+  border-right: 100px solid transparent;
+  animation: linear 0.5s infinite;
+}
+  
+.pacman:after {
+  animation: anime linear 0.5s infinite;
+} 
+  
+  
+@keyframes anime {
+  0% {
+    transform: rotate(270deg);
+  }
+  25%{
+    transform: rotate(315deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75%{
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+  
+
